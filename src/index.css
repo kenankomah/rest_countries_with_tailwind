@@ -1,33 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 body {
-    margin: 0;
-    font-family: "Nunito Sans", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    /* background-color: $off-white; */
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #f2f2f2;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
-}
-
-.dark-theme {
-    /* background-color: $dark-blue; */
-    color: white;
-
-    body {
-        /* background-color: $dark-blue; */
-        color: white;
-    }
-}
-
-html.dark-theme {
-    color-scheme: dark;
-}
-
-a {
-    /* color: $dark-text; */
-    text-decoration: none;
-}

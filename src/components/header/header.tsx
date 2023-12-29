@@ -28,18 +28,17 @@ function Header() {
         : "/assets/dark_mode_icon.svg";
 
     return (
-        <header className="header-bar">
-            <div className="content_container">
-                <h1 className="header_text"> Where in the world?</h1>
-                <div onClick={themeToggle} className="theme-toggle">
-                    <div className="theme_icon_container">
-                        <img
-                            className="theme_icon"
-                            src={themeIcon}
-                            alt={themeText}
-                        />
+        <header className="fixed top-0 left-0 right-0 h-20 bg-white drop-shadow-md">
+            <div className="flex space-x-4 w-full max-w-7xl justify-between px-14 mx-auto relative top-1/2 -translate-y-1/2 ">
+                <h1 className="text-2xl font-bold">Where in the world?</h1>
+                <div
+                    onClick={themeToggle}
+                    className="flex items-center hover:bg-blue"
+                >
+                    <div className="">
+                        <img className="" src={themeIcon} alt={themeText} />
                     </div>
-                    <span className="theme_text">{themeText}</span>
+                    <span className="">{themeText}</span>
                 </div>
             </div>
         </header>
