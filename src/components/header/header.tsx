@@ -29,14 +29,18 @@ function Header() {
 
     return (
         <header className="fixed top-0 left-0 right-0 h-20 bg-white drop-shadow-md">
-            <div className="flex space-x-4 w-full max-w-7xl justify-between px-14 mx-auto relative top-1/2 -translate-y-1/2 ">
+            <div className="flex space-x-4 w-full max-w-7xl justify-between px-14 mx-auto relative top-1/2 -translate-y-1/2">
                 <h1 className="text-2xl font-bold">Where in the world?</h1>
                 <div
                     onClick={themeToggle}
-                    className="flex items-center hover:bg-blue"
+                    className="group flex items-center hover:bg-blue cursor-pointer"
                 >
-                    <div className="">
-                        <img className="" src={themeIcon} alt={themeText} />
+                    <div className="rounded-full cursor-pointer h-10 mr-1 w-10 group-hover:bg-customGray">
+                        <img
+                            className="block h-5 mx-auto relative w-5 top-1/2 -translate-y-1/2"
+                            src={themeIcon}
+                            alt={themeText}
+                        />
                     </div>
                     <span className="">{themeText}</span>
                 </div>

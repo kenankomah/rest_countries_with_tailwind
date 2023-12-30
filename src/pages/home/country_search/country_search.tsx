@@ -20,9 +20,15 @@ export default function CountrySearch({
         }
     }, [regionList]);
 
+    const searchIconStyles = {
+        backgroundImage: `url('assets/search_icon.svg')`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "1.5625rem",
+    };
+
     return (
         <input
-            className="search_field"
+            className="focus-visible:outline-none w-full h-14 w-96 max-w-2xl px-16 py-6 rounded-md shadow-md bg-white dark:bg-customDarkGray dark:text-white"
             type="text"
             placeholder="Search for a country..."
             ref={inputRef}
@@ -32,6 +38,7 @@ export default function CountrySearch({
                 const target = e.target as HTMLInputElement;
                 setCountryList(searchByCountryName(target.value, regionList));
             }}
+            style={searchIconStyles}
         />
     );
 }

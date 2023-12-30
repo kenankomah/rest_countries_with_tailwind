@@ -17,11 +17,11 @@ export default function HomePage() {
     }, [countries]);
 
     return (
-        <div className="App ">
+        <div className="">
             <Header />
 
-            <main className="container">
-                <div className="search_and_filter">
+            <main className="">
+                <div className="mt-32 flex justify-between  max-w-7xl mx-auto px-14">
                     <CountrySearch
                         regionList={regionList}
                         setCountryList={setCountryList}

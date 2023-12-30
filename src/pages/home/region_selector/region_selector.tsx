@@ -38,7 +38,9 @@ export default function RegionSelector({
     }
 
     function menuSate(e: MouseEvent<HTMLDivElement>) {
+        console.log("isMenuOpen", isMenuOpen);
         setIsMenuOpen(!isMenuOpen);
+
         const target = e.target as HTMLDivElement;
         if (target.nodeName === "P") {
             const textContent = target.textContent as string;
@@ -47,17 +49,31 @@ export default function RegionSelector({
         }
     }
 
-    const menuClass = isMenuOpen ? "dropdown-content" : "dropdown-content hide";
+    const dropdownClassBase =
+        "dropdown-content bg-white rounded-sm text-black absolute w-full z-10 drop-shadow-md top-16";
+    const chevronClassBase =
+        "chevron_container bg-no-repeat relative h-2.5 transition duration-100 w-3";
+
+    const menuClass = isMenuOpen
+        ? dropdownClassBase
+        : `${dropdownClassBase} hidden`;
     const chevronClass = isMenuOpen
-        ? "chevron_container rotate"
-        : "chevron_container";
+        ? `${chevronClassBase} rotate-180`
+        : chevronClassBase;
 
     return (
-        <div className="dropdown" onClick={menuSate}>
-            <button className="dropdown-button">
+        <div className="inline-block text-sm relative w-48" onClick={menuSate}>
+            <button className="dropdown-button hover:bg-lightGray items-center bg-white border-0 rounded text-black cursor-pointer flex justify-between h-14 py-3 px-5 relative text-left w-full text-black drop-shadow-md">
                 {region}
 
-                <div className={chevronClass}></div>
+                <div
+                    className={chevronClass}
+                    style={{
+                        backgroundImage: `url('assets/chevron_down_icon.svg')`,
+                        backgroundSize: "12px",
+                        top: "1px",
+                    }}
+                ></div>
             </button>
             <div className={menuClass}>
                 <p>All Regions</p>
