@@ -51,29 +51,29 @@ export default function RegionSelector({
 
     const dropdownClassBase =
         "dropdown-content bg-white rounded-sm text-black absolute w-full z-10 drop-shadow-md top-16";
+
     const chevronClassBase =
         "chevron_container bg-no-repeat relative h-2.5 transition duration-100 w-3";
 
     const menuClass = isMenuOpen
         ? dropdownClassBase
         : `${dropdownClassBase} hidden`;
+
     const chevronClass = isMenuOpen
         ? `${chevronClassBase} rotate-180`
         : chevronClassBase;
+
+    const chevronStyles = {
+        backgroundImage: `url('assets/chevron_down_icon.svg')`,
+        backgroundSize: "12px",
+        top: "1px",
+    };
 
     return (
         <div className="inline-block text-sm relative w-48" onClick={menuSate}>
             <button className="dropdown-button hover:bg-lightGray items-center bg-white border-0 rounded text-black cursor-pointer flex justify-between h-14 py-3 px-5 relative text-left w-full text-black drop-shadow-md">
                 {region}
-
-                <div
-                    className={chevronClass}
-                    style={{
-                        backgroundImage: `url('assets/chevron_down_icon.svg')`,
-                        backgroundSize: "12px",
-                        top: "1px",
-                    }}
-                ></div>
+                <div className={chevronClass} style={chevronStyles}></div>
             </button>
             <div className={menuClass}>
                 <p>All Regions</p>

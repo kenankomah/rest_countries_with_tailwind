@@ -5,8 +5,15 @@ module.exports = {
         extend: {
             colors: {
                 customGray: "#e8e8e8",
-                lightGray: "#ededed", //"#f0f0f0", //"#f7f7f7",
+                lightGray: "#f7f7f7", //"#f0f0f0", //"#f7f7f7",
             },
+        },
+        screens: {
+            xs: "320px",
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1200px",
         },
     },
     plugins: [],

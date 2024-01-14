@@ -21,7 +21,7 @@ export default function HomePage() {
             <Header />
 
             <main className="">
-                <div className="mt-32 flex justify-between  max-w-7xl mx-auto px-14">
+                <div className="mt-32 flex justify-between w-full mx-auto px-14 flex-col md:flex-row max-w-7xl ">
                     <CountrySearch
                         regionList={regionList}
                         setCountryList={setCountryList}

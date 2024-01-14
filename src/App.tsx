@@ -53,12 +53,6 @@ function App() {
                 }
                 const data = await response.json();
                 setCountries(data);
-                // console.log(
-                //     data.filter(
-                //         (country: CountryType) =>
-                //             country.name.common === "Ghana"
-                //     )
-                // );
             } catch (error) {
                 setErrorStatus(true);
                 console.error(error);

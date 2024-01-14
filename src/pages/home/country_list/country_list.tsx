@@ -25,7 +25,7 @@ function CountryList({ countryList }: CountryListProps) {
             ? "country_list_container single_country"
             : "country_list_container";
     return (
-        <div className={ListContainerClass}>
+        <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-7xl mx-auto px-14 mt-14">
             {countryList.map((country: CountryType) => {
                 return <CountryCard key={country.cca3} country={country} />;
             })}

@@ -9,26 +9,26 @@ function CountryCard({ country }: CountryCardProps) {
     const { name, population, region, capital, flags } = country;
     const altText = flags.alt ? flags.alt : `Flag of ${name.common}`;
     return (
-        <div className="country_card">
+        <div className="">
             <Link to={`/${country.cca3}`}>
                 <img
                     loading="lazy"
                     src={flags.svg}
                     alt={altText}
-                    className="country_flag"
+                    className="object-cover w-full h-40 rounded-t-md"
                 />
-                <div className="country_info">
+                <div className="">
                     <h2>{name.common}</h2>
                     <p>
-                        <span className="country_info_label">Population:</span>
+                        <span className="">Population:</span>
                         {population.toLocaleString()}
                     </p>
                     <p>
-                        <span className="country_info_label">Region:</span>
+                        <span className="">Region:</span>
                         {region}
                     </p>
                     <p>
-                        <span className="country_info_label">Capital:</span>
+                        <span className="">Capital:</span>
                         {capital}
                     </p>
                 </div>
