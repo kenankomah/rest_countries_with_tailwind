@@ -28,7 +28,7 @@ export default function CountrySearch({
 
     return (
         <input
-            className="focus-visible:outline-none w-full h-14 w-96  w-full px-16 py-6 rounded-md shadow-md bg-white dark:bg-customDarkGray dark:text-white md:max-w-sm"
+            className="h-12 mb-10 md:h-14 md:mb-0 focus-visible:outline-none w-full h-14 w-96  w-full px-16 py-6 rounded-md shadow-md bg-white dark:bg-customDarkGray dark:text-white md:max-w-sm"
             type="text"
             placeholder="Search for a country..."
             ref={inputRef}
