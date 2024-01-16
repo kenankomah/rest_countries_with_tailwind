@@ -9,7 +9,7 @@ function CountryCard({ country }: CountryCardProps) {
     const { name, population, region, capital, flags } = country;
     const altText = flags.alt ? flags.alt : `Flag of ${name.common}`;
     return (
-        <div className="">
+        <div className="bg-white drop-shadow-md hover:scale-105 hover:drop-shadow-2xl duration-300">
             <Link to={`/${country.cca3}`}>
                 <img
                     loading="lazy"
@@ -17,18 +17,20 @@ function CountryCard({ country }: CountryCardProps) {
                     alt={altText}
                     className="object-cover w-full h-40 rounded-t-md"
                 />
-                <div className="">
-                    <h2>{name.common}</h2>
+                <div className="pt-0 px-6 pb-8">
+                    <h2 className="font-bold text-lg my-4">{name.common}</h2>
                     <p>
-                        <span className="">Population:</span>
+                        <span className="text-sm font-bold mr-1">
+                            Population:
+                        </span>
                         {population.toLocaleString()}
                     </p>
                     <p>
-                        <span className="">Region:</span>
+                        <span className="text-sm font-bold mr-1 ">Region:</span>
                         {region}
                     </p>
                     <p>
-                        <span className="">Capital:</span>
+                        <span className="text-sm font-bold mr-1">Capital:</span>
                         {capital}
                     </p>
                 </div>

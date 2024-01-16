@@ -28,8 +28,8 @@ function Header() {
         : "/assets/dark_mode_icon.svg";
 
     return (
-        <header className="fixed top-0 left-0 right-0 h-20 bg-white drop-shadow-md z-10">
-            <div className="px-4 md:px-14 flex space-x-4 w-full max-w-7xl justify-between items-center mx-auto relative top-1/2 -translate-y-1/2">
+        <header className="px-4 md:px-14 fixed top-0 left-0 right-0 h-20 bg-white drop-shadow-md z-10">
+            <div className="flex space-x-4 w-full max-w-7xl justify-between items-center mx-auto relative top-1/2 -translate-y-1/2">
                 <h1 className="text-sm md:text-2xl font-bold">
                     Where in the world?
                 </h1>
