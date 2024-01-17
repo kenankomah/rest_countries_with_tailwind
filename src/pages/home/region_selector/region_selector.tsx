@@ -70,8 +70,8 @@ export default function RegionSelector({
     };
 
     return (
-        <div className="inline-block text-sm relative w-48" onClick={menuSate}>
-            <button className="h-12 md:h-14 dropdown-button hover:bg-lightGray items-center bg-white border-0 rounded text-black cursor-pointer flex justify-between py-3 px-5 relative text-left w-full text-black drop-shadow-md">
+        <div className="relative inline-block w-48 text-sm" onClick={menuSate}>
+            <button className="dropdown-button relative flex h-12 w-full cursor-pointer items-center justify-between rounded border-0 bg-white px-5 py-3 text-left text-black text-black drop-shadow-md hover:bg-lightGray md:h-14">
                 {region}
                 <div className={chevronClass} style={chevronStyles}></div>
             </button>
