@@ -11,9 +11,16 @@ function CountryDetails() {
 
     const selectedCountry = findSelectedCountry(countryCode, countries);
 
+    const arrowIconStyles = {
+        backgroundImage: `url('assets/arrows-left.svg')`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "1.375rem 1.375rem",
+        backgroundPosition: "1.8rem",
+    };
+
     if (!selectedCountry)
         return (
-            <div className="country_not_found">
+            <div className="">
                 <p>
                     Country not found! <br />
                     <Link to={"/"}>Back to homepage</Link>
@@ -24,10 +31,13 @@ function CountryDetails() {
     return (
         <>
             <Header />
-            <div className="country_details">
+            <div className="px-4 md:px-14">
                 <Link to="/">
-                    <button className="back_button">
-                        <span className="button_text">Back </span>
+                    <button
+                        className="mt-32 h-8 w-28 rounded bg-white text-sm drop-shadow-md hover:bg-lightGray md:mt-40 md:h-10 md:w-32 md:text-base"
+                        style={arrowIconStyles}
+                    >
+                        <span className="ml-6 md:ml-7">Back </span>
                     </button>
                 </Link>
                 <CountryDetailsInfo />
