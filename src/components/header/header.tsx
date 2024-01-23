@@ -2,10 +2,11 @@ import { useState } from "react";
 
 type classListActions = "add" | "remove" | "contains" | "toggle";
 
-const html = document.querySelector("html");
+// const html = document.querySelector("html");
+const html = document.documentElement;
 
 function themeClassHandler(action: classListActions) {
-    return html?.classList[action]("dark-theme");
+    return html?.classList[action]("dark");
 }
 
 function Header() {
@@ -28,18 +29,18 @@ function Header() {
         : "/assets/dark_mode_icon.svg";
 
     return (
-        <header className="px-4 md:px-14 fixed top-0 left-0 right-0 h-20 bg-white drop-shadow-md z-10">
-            <div className="flex space-x-4 w-full max-w-7xl justify-between items-center mx-auto relative top-1/2 -translate-y-1/2">
-                <h1 className="text-sm md:text-2xl font-bold">
+        <header className="dark:bg-headerDark fixed left-0 right-0 top-0 z-10 h-20 bg-white px-4 drop-shadow-md md:px-14">
+            <div className="relative top-1/2 mx-auto flex w-full max-w-7xl -translate-y-1/2 items-center justify-between space-x-4">
+                <h1 className="text-sm font-bold md:text-2xl">
                     Where in the world?
                 </h1>
                 <div
                     onClick={themeToggle}
-                    className="group flex items-center hover:bg-blue cursor-pointer"
+                    className="hover:bg-blue group flex cursor-pointer items-center"
                 >
-                    <div className="rounded-full cursor-pointer h-10 mr-1 w-10 group-hover:bg-customGray">
+                    <div className="mr-1 h-10 w-10 cursor-pointer rounded-full group-hover:bg-customGray">
                         <img
-                            className="block h-5 mx-auto relative w-5 top-1/2 -translate-y-1/2"
+                            className="relative top-1/2 mx-auto block h-5 w-5 -translate-y-1/2"
                             src={themeIcon}
                             alt={themeText}
                         />

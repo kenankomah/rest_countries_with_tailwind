@@ -50,7 +50,7 @@ export default function RegionSelector({
     }
 
     const dropdownClassBase =
-        "dropdown-content bg-white rounded-sm text-black absolute w-full z-10 drop-shadow-md top-16";
+        "dropdown-content bg-white rounded text-black absolute w-full z-10 drop-shadow-md top-16 dark:bg-headerDark dark:text-white";
 
     const chevronClassBase =
         "chevron_container bg-no-repeat relative h-2.5 transition duration-100 w-3";
@@ -70,8 +70,8 @@ export default function RegionSelector({
     };
 
     return (
-        <div className="relative inline-block w-48 text-sm" onClick={menuSate}>
-            <button className="dropdown-button relative flex h-12 w-full cursor-pointer items-center justify-between rounded border-0 bg-white px-5 py-3 text-left text-black drop-shadow-md hover:bg-lightGray md:h-14">
+        <div className=" relative inline-block w-48 text-sm" onClick={menuSate}>
+            <button className=" dark:bg-headerDark dropdown-button relative flex h-12 w-full cursor-pointer items-center justify-between rounded border-0 bg-white px-5 py-3 text-left text-black drop-shadow-md hover:bg-lightGray md:h-14 dark:text-white">
                 {region}
                 <div className={chevronClass} style={chevronStyles}></div>
             </button>

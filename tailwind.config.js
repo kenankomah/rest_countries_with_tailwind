@@ -6,6 +6,8 @@ module.exports = {
             colors: {
                 customGray: "#e8e8e8",
                 lightGray: "#f7f7f7", //"#f0f0f0", //"#f7f7f7",
+                headerDark: "#2b3844",
+                bodyDark: "#202c36",
             },
         },
         screens: {
@@ -16,5 +18,6 @@ module.exports = {
             xl: "1200px",
         },
     },
+    darkMode: "class",
     plugins: [],
 };
