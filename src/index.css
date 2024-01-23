@@ -5,6 +5,30 @@
 body {
     font-family: "Nunito Sans", sans-serif;
     background-color: #f2f2f2;
+    color: #111517;
+}
+
+.skeleton {
+    -webkit-animation: skeleton-loading 1s linear infinite alternate;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@-webkit-keyframes skeleton-loading {
+    0% {
+        background-color: #c2cfd6;
+    }
+    100% {
+        background-color: #f0f3f5;
+    }
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: #c2cfd6;
+    }
+    100% {
+        background-color: #f0f3f5;
+    }
 }
 
 @layer components {
