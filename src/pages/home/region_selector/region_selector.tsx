@@ -64,16 +64,19 @@ export default function RegionSelector({
         : chevronClassBase;
 
     const chevronStyles = {
-        backgroundImage: `url('assets/chevron_down_icon.svg')`,
         backgroundSize: "12px",
-        top: "1px",
     };
 
     return (
-        <div className=" relative inline-block w-48 text-sm" onClick={menuSate}>
-            <button className=" dark:bg-headerDark dropdown-button relative flex h-12 w-full cursor-pointer items-center justify-between rounded border-0 bg-white px-5 py-3 text-left text-black drop-shadow-md hover:bg-lightGray md:h-14 dark:text-white">
+        <div className="relative inline-block w-48 text-sm" onClick={menuSate}>
+            <button className=" dark:hover:bg-darkHover dark:bg-headerDark dropdown-button relative flex h-12 w-full cursor-pointer items-center justify-between rounded border-0 bg-white px-5 py-3 text-left text-black drop-shadow-md hover:bg-lightGray md:h-14 dark:text-white">
                 {region}
-                <div className={chevronClass} style={chevronStyles}></div>
+                <div
+                    className={
+                        "bg-chevron-dark dark:bg-chevron-light " + chevronClass
+                    }
+                    style={chevronStyles}
+                ></div>
             </button>
             <div className={menuClass}>
                 <p>All Regions</p>

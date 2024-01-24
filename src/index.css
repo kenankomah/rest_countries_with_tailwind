@@ -38,7 +38,7 @@ body {
 
 @layer components {
     .dropdown-content > p {
-        @apply m-0 block cursor-pointer whitespace-nowrap px-5 py-1 text-sm text-gray-700 hover:bg-lightGray hover:text-gray-900 dark:text-white;
+        @apply dark:hover:bg-darkHover hover:bg-lightHover m-0 block cursor-pointer whitespace-nowrap px-5 py-1 text-sm text-gray-700 hover:text-gray-900 dark:text-white dark:hover:text-white;
     }
 
     .back-button {
@@ -50,6 +50,10 @@ body {
         @media (min-width: 768px) {
             background-position: 1.8rem;
         }
+    }
+
+    .dark .back-button {
+        background-image: url("../public/assets/arrows-left-white.svg");
     }
 }
 

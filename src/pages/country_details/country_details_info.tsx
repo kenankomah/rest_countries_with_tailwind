@@ -106,7 +106,7 @@ function CountryDetailsInfo() {
                             const { cca3, name } = neighbour as CountryType;
                             return (
                                 <Link key={cca3} to={`/${cca3}`} className="">
-                                    <button className="m-0 h-8 min-w-24 rounded bg-white px-2 text-sm drop-shadow-md hover:bg-lightGray md:h-10 md:text-base">
+                                    <button className="dark:hover:bg-darkHover dark:bg-headerDark m-0 h-8 min-w-24 rounded bg-white px-2 text-sm drop-shadow-md hover:bg-lightGray md:h-10 md:text-base">
                                         {name.common}
                                     </button>
                                 </Link>

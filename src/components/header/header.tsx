@@ -38,9 +38,9 @@ function Header() {
                     onClick={themeToggle}
                     className="hover:bg-blue group flex cursor-pointer items-center"
                 >
-                    <div className="mr-1 h-10 w-10 cursor-pointer rounded-full group-hover:bg-customGray">
+                    <div className="dark:group-hover:bg-darkHover mr-1 h-10 w-10 cursor-pointer rounded-full group-hover:bg-customGray">
                         <img
-                            className="relative top-1/2 mx-auto block h-5 w-5 -translate-y-1/2"
+                            className="relative top-1/2 mx-auto block h-5 w-5 -translate-y-1/2 dark:h-7 dark:w-7"
                             src={themeIcon}
                             alt={themeText}
                         />

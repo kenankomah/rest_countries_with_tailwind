@@ -13,10 +13,12 @@ function CountryDetails() {
 
     if (!selectedCountry)
         return (
-            <div className="">
-                <p>
+            <div className="h-dvh text-3xl">
+                <p className="relative top-1/2 text-center ">
                     Country not found! <br />
-                    <Link to={"/"}>Back to homepage</Link>
+                    <Link to={"/"} className="text-blue-600 underline">
+                        Back to homepage
+                    </Link>
                 </p>
             </div>
         );
@@ -26,7 +28,7 @@ function CountryDetails() {
             <Header />
             <div className="dark:bg-bodyDark mx-auto box-content max-w-7xl px-4 md:px-14">
                 <Link to="/">
-                    <button className="back-button mt-32 h-8 w-28 rounded bg-white text-sm drop-shadow-md hover:bg-lightGray md:mt-40 md:h-10 md:w-32 md:text-base">
+                    <button className="back-button dark:hover:bg-darkHover dark:bg-headerDark mt-32 h-8 w-28 rounded bg-white text-sm drop-shadow-md hover:bg-lightGray md:mt-40 md:h-10 md:w-32 md:text-base dark:text-white">
                         <span className="ml-6 md:ml-7">Back </span>
                     </button>
                 </Link>

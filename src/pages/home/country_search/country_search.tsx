@@ -20,15 +20,9 @@ export default function CountrySearch({
         }
     }, [regionList]);
 
-    const searchIconStyles = {
-        backgroundImage: `url('assets/search_icon.svg')`,
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "1.5625rem",
-    };
-
     return (
         <input
-            className="dark:bg-headerDark mb-10 h-12 h-14 w-96 w-full rounded-md bg-white px-16 py-6 shadow-md focus-visible:outline-none md:mb-0 md:h-14 md:max-w-sm"
+            className="bg-searchIcon-dark dark:bg-searchIcon-light dark:bg-headerDark mb-10 h-14 w-full rounded-md bg-white bg-no-repeat px-16 py-6 shadow-md focus-visible:outline-none md:mb-0 md:h-14 md:max-w-sm"
             type="text"
             placeholder="Search for a country..."
             ref={inputRef}
@@ -38,7 +32,7 @@ export default function CountrySearch({
                 const target = e.target as HTMLInputElement;
                 setCountryList(searchByCountryName(target.value, regionList));
             }}
-            style={searchIconStyles}
+            style={{ backgroundPosition: "1.5625rem" }}
         />
     );
 }
