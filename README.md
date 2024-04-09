@@ -1,4 +1,4 @@
-Link to the project: https://rest-countries-cd0d3.firebaseapp.com/
+Link to the live project: https://rest-countries-with-tailwind.web.app/
 
 ## To run locally
 
