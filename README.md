@@ -1,4 +1,7 @@
-Link to the live project: https://rest-countries-with-tailwind.web.app/
+## Tailwind Project
+
+I wanted to learn Tailwind so I created this project for that purpose
+Here is a link to the live project: https://rest-countries-with-tailwind.web.app/
 
 ## To run locally
 
