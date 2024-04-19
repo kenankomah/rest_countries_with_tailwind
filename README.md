@@ -1,6 +1,6 @@
 ## Tailwind Project
 
-I wanted to learn Tailwind so that was the main for creating this project.\
+I wanted to learn Tailwind so that was the main reason for creating this project.\
 Here is a link to the live project: https://rest-countries-with-tailwind.web.app/
 
 ## To run locally
