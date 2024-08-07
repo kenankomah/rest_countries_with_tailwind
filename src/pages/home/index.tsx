@@ -20,7 +20,7 @@ export default function HomePage() {
         <div className="">
             <Header />
 
-            <main className="dark:bg-bodyDark px-4 md:px-14">
+            <main className="px-4 md:px-14 dark:bg-bodyDark">
                 <div className="mx-auto mt-32 flex w-full max-w-7xl flex-col justify-between md:flex-row">
                     <CountrySearch
                         regionList={regionList}

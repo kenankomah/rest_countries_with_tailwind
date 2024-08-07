@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CountryDetails from "./pages/country_details";
 import HomePage from "./pages/home";
+import axios from "axios";
 
 export interface CountryType {
     name: {
@@ -43,15 +44,15 @@ function App() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch(
-                    "https://restcountries.com/v3.1/all"
+                const response = await axios.get(
+                    "https://restcountries.com/v3.1/all",
                 );
 
-                if (!response.ok) {
+                if (response.status !== 200) {
                     setErrorStatus(errorStatus);
                     throw new Error("Network response was not ok");
                 }
-                const data = await response.json();
+                const data = response.data;
                 setCountries(data);
             } catch (error) {
                 setErrorStatus(true);
