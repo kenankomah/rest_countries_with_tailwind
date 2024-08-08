@@ -12,7 +12,7 @@ function CountryList({ countryList }: CountryListProps) {
 
     if (error) {
         return (
-            <div className="error_container">
+            <div className="error_container mt-36 text-center font-bold">
                 <h3>Something went wrong, refresh the page to try again</h3>
             </div>
         );
