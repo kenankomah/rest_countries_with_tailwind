@@ -7,7 +7,6 @@ interface CountryCardProps {
 
 function CountryCard({ country }: CountryCardProps) {
     const { name, population, region, capital, flags } = country;
-    console.log({ country });
     const altText = flags.alt ? flags.alt : `Flag of ${name.common}`;
     return (
         <div className="bg-white drop-shadow-md hover:scale-105 hover:drop-shadow-2xl hover:duration-300 dark:bg-headerDark">
