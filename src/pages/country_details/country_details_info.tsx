@@ -29,10 +29,12 @@ function CountryDetailsInfo() {
         ) as CountryType;
     });
 
-    const nativeName = Object.values(name.nativeName)[0].common;
-    const currencyArray = Object.values(currencies);
-    const currencyNameList = currencyArray.map(({ name }) => {
-        return name;
+    const nativeName = name.nativeName
+        ? Object.values(name.nativeName)[0].common
+        : name.common;
+    const currencyArray = currencies ? Object.values(currencies) : [];
+    const currencyNameList = currencyArray.map((currency) => {
+        return currency.name;
     });
 
     return (
@@ -56,7 +58,7 @@ function CountryDetailsInfo() {
                                 <span className="mr-1 font-bold">
                                     Population:
                                 </span>
-                                {population.toLocaleString()}
+                                {population?.toLocaleString()}
                             </p>
                             <p className="my-2 text-sm md:text-base">
                                 <span className="mr-1 font-bold">Region:</span>
@@ -92,7 +94,9 @@ function CountryDetailsInfo() {
                                 <span className="mr-1 font-bold">
                                     Languages:
                                 </span>
-                                {Object.values(languages).join(", ")}
+                                {languages
+                                    ? Object.values(languages).join(", ")
+                                    : "N/A"}
                             </p>
                         </div>
                     </div>

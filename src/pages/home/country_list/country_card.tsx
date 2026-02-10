@@ -7,9 +7,10 @@ interface CountryCardProps {
 
 function CountryCard({ country }: CountryCardProps) {
     const { name, population, region, capital, flags } = country;
+    console.log({ country });
     const altText = flags.alt ? flags.alt : `Flag of ${name.common}`;
     return (
-        <div className="dark:bg-headerDark bg-white drop-shadow-md hover:scale-105 hover:drop-shadow-2xl hover:duration-300">
+        <div className="bg-white drop-shadow-md hover:scale-105 hover:drop-shadow-2xl hover:duration-300 dark:bg-headerDark">
             <Link to={`/${country.cca3}`}>
                 <img
                     loading="lazy"
@@ -23,7 +24,7 @@ function CountryCard({ country }: CountryCardProps) {
                         <span className="mr-1 text-sm font-bold">
                             Population:
                         </span>
-                        {population.toLocaleString()}
+                        {population?.toLocaleString()}
                     </p>
                     <p>
                         <span className="mr-1 text-sm font-bold">Region:</span>

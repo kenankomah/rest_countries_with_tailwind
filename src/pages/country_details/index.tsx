@@ -26,9 +26,9 @@ function CountryDetails() {
     return (
         <>
             <Header />
-            <div className="dark:bg-bodyDark mx-auto box-content max-w-7xl px-4 md:px-14">
+            <div className="mx-auto box-content max-w-7xl px-4 md:px-14 dark:bg-bodyDark">
                 <Link to="/">
-                    <button className="back-button dark:hover:bg-darkHover dark:bg-headerDark mt-32 h-8 w-28 rounded bg-white text-sm drop-shadow-md hover:bg-lightGray md:mt-40 md:h-10 md:w-32 md:text-base dark:text-white">
+                    <button className="back-button mt-32 h-8 w-28 rounded bg-white text-sm drop-shadow-md hover:bg-lightGray md:mt-40 md:h-10 md:w-32 md:text-base dark:bg-headerDark dark:text-white dark:hover:bg-darkHover">
                         <span className="ml-6 md:ml-7">Back </span>
                     </button>
                 </Link>
