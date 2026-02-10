@@ -45,7 +45,7 @@ function App() {
         async function fetchData() {
             try {
                 const response = await axios.get(
-                    "https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital,cca3,subregion,currencies,languages",
+                    "https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital,cca3,subregion,currencies,languages,borders",
                 );
 
                 if (response.status !== 200) {
