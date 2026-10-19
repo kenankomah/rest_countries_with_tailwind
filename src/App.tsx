@@ -1,8 +1,9 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CountryDetails from "./pages/country_details";
 import HomePage from "./pages/home";
-import axios from "axios";
+import localCountries from "./data.json";
+import { LocalCountry, mapLocalCountries } from "./mapLocalCountries";
 
 export interface CountryType {
     name: {
@@ -37,32 +38,10 @@ interface ContextValueType {
 
 export const CountriesData = createContext({} as ContextValueType);
 
+const countries = mapLocalCountries(localCountries as LocalCountry[]);
+
 function App() {
-    const [countries, setCountries] = useState<CountryType[]>([]);
-    const [errorStatus, setErrorStatus] = useState(false);
-
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                const response = await axios.get(
-                    "https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital,cca3,subregion,currencies,languages,borders",
-                );
-
-                if (response.status !== 200) {
-                    setErrorStatus(errorStatus);
-                    throw new Error("Network response was not ok");
-                }
-                const data = response.data;
-                setCountries(data);
-            } catch (error) {
-                setErrorStatus(true);
-                console.error(error);
-            }
-        }
-        fetchData();
-    }, [errorStatus]);
-
-    const contextValue = { countries, error: errorStatus };
+    const contextValue = { countries, error: false };
 
     return (
         <Router>
