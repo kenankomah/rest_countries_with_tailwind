@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "rest-countries-with-tailwind",
     "public": "build",
     "ignore": [
       "firebase.json",

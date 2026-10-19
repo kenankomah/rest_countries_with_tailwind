@@ -101,7 +101,7 @@ function CountryDetailsInfo() {
                         </div>
                     </div>
                 </div>
-                {borderCountries?.length && (
+                {!!borderCountries?.length && (
                     <div className="mb-12 flex flex-wrap items-center gap-1 md:mb-0 md:mt-12">
                         <h2 className="mr-3 text-sm font-bold md:text-base">
                             Border Countries:
@@ -110,7 +110,7 @@ function CountryDetailsInfo() {
                             const { cca3, name } = neighbour as CountryType;
                             return (
                                 <Link key={cca3} to={`/${cca3}`} className="">
-                                    <button className="dark:hover:bg-darkHover dark:bg-headerDark m-0 h-8 min-w-24 rounded bg-white px-2 text-sm drop-shadow-md hover:bg-lightGray md:h-10 md:text-base">
+                                    <button className="m-0 h-8 min-w-24 rounded bg-white px-2 text-sm drop-shadow-md hover:bg-lightGray md:h-10 md:text-base dark:bg-headerDark dark:hover:bg-darkHover">
                                         {name.common}
                                     </button>
                                 </Link>
